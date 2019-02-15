@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  {% if title%}
-  <title>{{ title }}</title>
-  {% else %}
-  <title> Home-News</title>
-  {% endif %}
-</head>
-<body>
-  <h1>hohohohoh</h1>
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+{% block content %}
+  <h1>News Banange</h1>
+  <h3>Bitcoin</h3>
+  <ul>
+      {{ macro.displayArticleList(source1)}}
+  </ul>
+  <h3>TechCrunch</h3>
+  <ul>
+      {{ macro.displayArticleList(source2)}}
+  </ul>
+
+  <h3>Mashable</h3>
+  <ul>
+      {{ macro.displayArticleList(source3)}}
+  </ul>
+
+  <h3>CNN</h3>
+  <ul>
+      {{ macro.displayArticleList(source4)}}
+  </ul>
   
-</body>
-</html>
+  {% endblock %}
+  

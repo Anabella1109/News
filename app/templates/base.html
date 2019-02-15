@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  {% if title%}
+  <title>{{ title }}</title>
+  {% else %}
+  <title> Home-News</title>
+  {% endif %}
+
+  {% import 'macros.html' as macro%}
+</head>
+<body>
+   <!-- Content block -->
+
+   {% block content %}
+
+   {% endblock%}
+</body>
