@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  {% if title%}
-  <title>{{ title }}</title>
-  {% else %}
-  <title> Home-News</title>
-  {% endif %}
+{% extends 'bootstrap/base.html'%}
 
-  {% import 'macros.html' as macro%}
-</head>
-<body>
-   <!-- Content block -->
-
-   {% block content %}
-
-   {% endblock%}
-</body>
+<!-- Navbar block  --> 
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}

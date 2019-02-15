@@ -50,7 +50,9 @@ def process_news(news_list):
         if imageUrl:
           article_object=Article(author,title,description,url,imageUrl)
           news_results.append(article_object)
-    return news_results    
+    return news_results 
+
+# def get_source   
 
 
 
