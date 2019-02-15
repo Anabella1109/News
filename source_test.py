@@ -4,7 +4,7 @@ Source=source.Source
 
 class SourceTest(unittest.TestCase):
   '''
-  Test class to test the behaviour of the movie class
+  Test class to test the behaviour of the source class
   '''
 
   def setUp(self):
