@@ -49,9 +49,10 @@ def process_news(news_list):
         description=article.get('description')
         url=article.get('url')
         imageUrl=article.get('urlToImage')
+        publishedAt=article.get("publishedAt")
 
         if imageUrl:
-          article_object=Article(author,title,description,url,imageUrl)
+          article_object=Article(author,title,description,url,imageUrl,publishedAt)
           news_results.append(article_object)
     return news_results 
 
