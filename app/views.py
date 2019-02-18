@@ -1,6 +1,8 @@
 from flask import render_template
 from app import app
-from .request import get_news
+from .models import source
+from .request import get_news,get_source
+Source=source.Source
 
 # Views
 @app.route('/')
@@ -9,14 +11,22 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    bitcoin_news=get_news('bitcoin')
-    tech_news=get_news('TechCrunch')
-    mash_news=get_news('Mashable')
-    cnn_news=get_news('CNN')
+    # sources=Source.get_source()
+    # for source in sources:
+    #    source=get_source() 
+    #    hhh=get_news(source)  
+    sources=get_source()
+    print(sources)
+    for source in sources:
+       source1=get_news(source)
+    # bitcoin_news=get_news('bitcoin')
+    # tech_news=get_news('TechCrunch')
+    # mash_news=get_news('Mashable')
+    # cnn_news=get_news('CNN')
 
 
     title="Home- News"
-    return render_template('index.html', title=title, source1=bitcoin_news,source2=tech_news,source3=mash_news,source4=cnn_news)
+    return render_template('index.html', title=title, source1=source1)
 
 @app.route('/article/<article_url>')
 def article(article_url):
