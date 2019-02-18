@@ -9,6 +9,7 @@ api_key = app.config['NEWS_API_KEY']
 
 base_url=app.config['NEWS_API_BASE_URL1']
 base_url1=app.config['NEWS_API_BASE_URL2']
+sources_url=app.config['SOURCES_BASE_URL']
 
 
 
@@ -54,43 +55,45 @@ def process_news(news_list):
           news_results.append(article_object)
     return news_results 
 
-def get_source():
+def get_source(category):
     '''
-    Function that return source object
+    Function that gets the json response to our url request
     '''
-    get_source_url=base_url1.format(api_key)
-    with urllib.request.urlopen(get_source_url) as url:
-        get_source_data=url.read()
-        get_source_response=json.loads(get_source_data)
+    get_sources_url = sources_url.format(category,api_key)
 
-        source_results=None
-        if get_source_response['articles']:
-           source_resultd_list=get_source_response['articles']
-           source_results=process_sources(source_resultd_list)
-    return source_results
+    with urllib.request.urlopen(get_sources_url) as url:
+        get_sources_data = url.read()
+        get_sources_response = json.loads(get_sources_data)
 
-def process_sources(source_list):
+        sources_results = None
+
+        if get_sources_response['sources']:
+            sources_results = process_sources(get_sources_response['sources'])
+    
+    return sources_results
+
+def process_sources(sources_list):
     '''
-    Function  that processes the source result and transform them to a list of Objects
-
-    Args:
-        source_list: A list of dictionaries that contain news details
-
-    Returns :
-        source_results: A list of source objects
+    Function that processes the json results
     '''
-    source_results=[]
-    sources=source_list['source']
-    for sourcee in sources:
-        id=sourcee.get('id')
-        name=sourcee.get('name')
+    sources_results = []
 
-        if name:
-          source_object=Source(id,name)
-          source_results.append(source_object)
-    return source_results
-   
+    for source in sources_list:
+        id = source.get('id')
+        name = source.get('name')
+        description = source.get('description')
+        url = source.get('url')
+        category = source.get('category')
+        
 
+        if url:
+            source_object = Source(id,name,description,url,category)
+            sources_results.append(source_object)
+    
+    return sources_results
+
+
+       
 
 
    

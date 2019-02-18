@@ -11,7 +11,7 @@ class SourceTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_source = Source(1234,"AKA")
+        self.new_source = Source(1234,"AKA","Description here","https://kk.com","kk")
 
   def test_instance(self):
         self.assertTrue(isinstance(self.new_source,Source))  
