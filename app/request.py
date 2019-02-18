@@ -8,7 +8,7 @@ Article=article.Article
 api_key = app.config['NEWS_API_KEY']
 
 base_url=app.config['NEWS_API_BASE_URL1']
-base_url1=app.config['NEWS_API_BASE_URL2']
+# base_url1=app.config['NEWS_API_BASE_URL2']
 sources_url=app.config['SOURCES_BASE_URL']
 
 

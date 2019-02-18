@@ -8,10 +8,10 @@
       </div>
   </div>
   <div class="row">
-      {% for article in news %}
+      {% for article in articles %}
       <div class="col-md-3 articles-details">
           <a href={{article.url}} target="_blank">
-              <img src={{article.imageUrl}} alt="IMAGE LOADING...">
+              <img src={{article.imageUrl}} alt="IMAGE LOADING..." height="200">
           </a>
           <div class="words">
               <h4 class="text-bold"> {{article.title}} </h4>
@@ -26,3 +26,4 @@
       {% endfor %}
   </div>
 </div>
+{% endblock %}

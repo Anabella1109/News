@@ -24,13 +24,14 @@ def index():
     title="Home- News"
     return render_template('index.html',title=title, general=general_category, business = business_category, entertainment = entertainment_category, sports = sports_category, technology = technology_category, science = sciences_category, health = health_category)
 
-@app.route('/source/<source_name>')
-def sources(source_name):
+@app.route('/source/<source_id>')
+def sources(source_id):
   '''
   View article page function that article source page
   '''
 
-  articles=get_news(source_name)
-  title=f'{source_name}'
+  articles=get_news(source_id)
+  print(source_id)
+  title=f'{source_id}'
   return render_template('source.html',title=title,articles=articles)
    
