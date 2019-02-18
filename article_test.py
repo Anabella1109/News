@@ -11,7 +11,7 @@ class ArticleTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_article = Article("1234","AKA","Please describe the article","http://coco.thenews","https://kweri.com")
+        self.new_article = Article("1234","AKA","Please describe the article","http://coco.thenews","https://kweri.com","12-34-56")
 
   def test_instance(self):
         self.assertTrue(isinstance(self.new_article,Article))  
@@ -25,6 +25,7 @@ class ArticleTest(unittest.TestCase):
       self.assertEqual(self.new_article.description,"Please describe the article")
       self.assertEqual(self.new_article.url,"http://coco.thenews")
       self.assertEqual(self.new_article.imageUrl,"https://kweri.com")
+      self.assertEqual(self.new_article.publishedAt,"12-34-56")
 
 if __name__ == '__main__':
     unittest.main()            
