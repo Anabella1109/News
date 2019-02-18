@@ -2,7 +2,7 @@ from flask import render_template
 from app import app
 from .models import source,article
 from .request import get_news,get_source
-# Source=source.Source
+Source=source.Source
 
 # Views
 @app.route('/')
@@ -24,9 +24,13 @@ def index():
     title="Home- News"
     return render_template('index.html',title=title, general=general_category, business = business_category, entertainment = entertainment_category, sports = sports_category, technology = technology_category, science = sciences_category, health = health_category)
 
-# @app.route('/article/<article_url>')
-# def article(article_url):
-#   '''
-#   View article page function that article source page
-#   '''
+@app.route('/source/<source_name>')
+def sources(source_name):
+  '''
+  View article page function that article source page
+  '''
+
+  articles=get_news(source_name)
+  title=f'{source_name}'
+  return render_template('source.html',title=title,articles=articles)
    
