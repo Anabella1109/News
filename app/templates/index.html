@@ -6,31 +6,9 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
 {% block content %}
-  <!-- <h1>News Banange</h1> -->
-  <!-- <h3>Bitcoin</h3> -->
-  <!-- <ul>
-      {{ macro.displayArticleList(source1)}}
-      {{ macro.displayArticleList(source2)}}
-      {{ macro.displayArticleList(source3)}}
-      {{ macro.displayArticleList(source4)}}
-  </ul> -->
-  <!-- <h3>TechCrunch</h3>
-  <ul>
-      {{ macro.displayArticleList(source2)}}
-  </ul>
-
-  <h3>Mashable</h3>
-  <ul>
-      {{ macro.displayArticleList(source3)}}
-  </ul>
-
-  <h3>CNN</h3>
-  <ul>
-      {{ macro.displayArticleList(source4)}}
-  </ul>
-  -->
+ 
   <div class="container-fluid">
-    <div class="row" id="top">
+    <div class="row">
         <div class="col-md-12 heading">
             <h1>News Highlights</h1>
         </div>
@@ -42,20 +20,28 @@
         </div>
         {{macro.displaySoures(general)}}
     </div>
-    
-    <div class="row up" >
+    <div class="row up">
         <div class="col-md-12 categories">
-            <h2 >Business News</h2>
+            <h2>Technology News</h2>
         </div>
-        {{macro.displaySoures(business)}}
+        {{macro.displaySoures(technology)}}
     </div>
-    
+    <div class="row up">
+        <div class="col-md-12 categories">
+            <h2>Science News</h2>
+        </div>
+        {{macro.displaySoures(science)}}
+    </div>
     <div class="row up">
         <div class="col-md-12 categories">
             <h2>Entertainment News</h2>
         </div>
         {{macro.displaySoures(entertainment)}}
     </div>
+    
+    
+    
+    
     
     <div class="row up">
         <div class="col-md-12 categories">
@@ -64,25 +50,22 @@
         {{macro.displaySoures(sports)}}
     </div>
     
-    <div class="row up">
-        <div class="col-md-12 categories">
-            <h2>Technology News</h2>
-        </div>
-        {{macro.displaySoures(technology)}}
-    </div>
+   
     
-    <div class="row up">
-        <div class="col-md-12 categories">
-            <h2>Science News</h2>
-        </div>
-        {{macro.displaySoures(science)}}
-    </div>
+   
 
     <div class="row up">
         <div class="col-md-12 categories">
             <h2>Health News</h2>
         </div>
         {{macro.displaySoures(health)}}
+    </div>
+
+    <div class="row up" >
+        <div class="col-md-12 categories">
+            <h2 >Business News</h2>
+        </div>
+        {{macro.displaySoures(business)}}
     </div>
 </div>
   {% endblock %}

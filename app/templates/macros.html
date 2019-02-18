@@ -1,19 +1,13 @@
-<!-- {% macro displayArticleList(news_list) %}
 
-    {% for article in news_list %}
-        <li>{{ article.title}}</li>
-    {% endfor %}
-
-{% endmacro %} -->
 
 {% macro displaySoures(cats) %} 
 {% for cat in cats %}
-<div class="col-md-3 single-source">
+<div class="col-md-3 single">
     <div class="row">
-        <div class="col-md-4 source-name">
+        <div class="col-md-4 name">
             <h3> {{cat.name}} </h3>
         </div>
-        <div class="col-md-7 source-details">
+        <div class="col-md-7 details">
             <p> {{cat.description|truncate(150)}}
                 <br>
                 <a href="/source/{{cat.id}}">See articles from this source</a>
@@ -25,8 +19,3 @@
 {% endfor %} 
 {% endmacro %}
 
-<!-- {% macro addMore() %}
-    
-{% endmacro%} -->
-
-<!-- <div class="col-md-4 source-name"> -->
