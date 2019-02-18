@@ -22,6 +22,9 @@ class SourceTest(unittest.TestCase):
       '''
       self.assertEqual(self.new_source.id,1234)
       self.assertEqual(self.new_source.name,"AKA")
+      self.assertEqual(self.new_source.description,"Description here")
+      self.assertEqual(self.new_source.url,"https://kk.com")
+      self.assertEqual(self.new_source.category,"kk")
 
 if __name__ == '__main__':
     unittest.main()            
