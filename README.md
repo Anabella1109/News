@@ -43,7 +43,7 @@ News highlight is a web app where a user can preview various news articles from 
 * The program should allow the user to click on aricle and read it from source website
 
 
-
+[Link to live website](https://newshighlight5.herokuapp.com/)
 ## Known Bugs
 
 There are no known bugs yet.
