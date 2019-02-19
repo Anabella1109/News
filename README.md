@@ -16,7 +16,7 @@ News highlight is a web app where a user can preview various news articles from 
 ### Cloning
 * In your terminal <br>
 
-    $ <name of virtual environment> source/bin/activate
+    $ source <name of virtual environment>/bin/activate<br>
     $ git clone https://github.com/Anabella1109/News.git<br>
     $ cd News
 
@@ -31,6 +31,17 @@ News highlight is a web app where a user can preview various news articles from 
   * In your terminal<br>
   $ python3.6 source_test.py<br>
    $ python3.6 article_.py
+
+
+##BDD
+
+###SPECS
+
+
+* The program should allow the user to see different sources of news
+* The program should allow the user to read articles from a specific source
+* The program should allow the user to click on aricle and read it from source website
+
 
 
 ## Known Bugs
