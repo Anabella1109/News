@@ -2,20 +2,43 @@
 
 {% macro displaySoures(cats) %} 
 {% for cat in cats %}
-<div class="col-md-3 single">
-    <div class="row">
-        <div class="col-md-4 name">
+<div class='container'>
+<div class="col-md-6 single">
+    <div class="row ">
+        <div class="name panen panel-header">
             <h3> {{cat.name}} </h3>
         </div>
-        <div class="col-md-7 details">
+        <div class="details panel panel-body">
             <p> {{cat.description|truncate(150)}}
-                <br>
-                <a href="/source/{{cat.id}}">See articles from this source</a>
+                
+                <a href="/source/{{cat.id}}" target="_blank">See articles from this source</a>
             
             </p>            
         </div>
     </div>
 </div>
+</div>
+{% endfor %} 
+{% endmacro %}
+
+{% macro displaySouresUrl(catss) %} 
+{% for cat in catss %}
+<div class='container'>
+        <div class="col-md-6" id="kk">
+            <div class="row ">
+                <!-- <div class="name panel panel-header">
+                    <h3> {{cat.name}} </h3>
+                </div> -->
+                <div class="details panel panel-body">
+                    <a href='{{cat.url}}'>Visit source page</a>
+                        
+                        
+                    
+                              
+                </div>
+            </div>
+        </div>
+        </div>
 {% endfor %} 
 {% endmacro %}
 

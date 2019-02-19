@@ -14,29 +14,52 @@
         </div>
     </div>
     
-    <div class="row up">
+    <div class="container-fluid up">
         <div class="col-md-12 categories">
             <h2>General News</h2>
         </div>
+        <div class='col-md-6'>
         {{macro.displaySoures(general)}}
+        </div>
+        <div class='col-md-6'>
+        {{macro.displaySouresUrl(general) }} 
+        </div>
     </div>
     <div class="row up">
         <div class="col-md-12 categories">
             <h2>Technology News</h2>
         </div>
+        <div class='col-md-6'>
         {{macro.displaySoures(technology)}}
+        </div>
+        <div class='col-md-6'>
+        {{ macro.displaySouresUrl(technology) }} 
+        </div>
     </div>
     <div class="row up">
         <div class="col-md-12 categories">
             <h2>Science News</h2>
         </div>
+        <div class='col-md-6'>
+
         {{macro.displaySoures(science)}}
+        </div>
+        <div class='col-md-6'>
+
+        {{macro.displaySouresUrl(science) }}
+        </div> 
     </div>
     <div class="row up">
         <div class="col-md-12 categories">
             <h2>Entertainment News</h2>
         </div>
+        <div class='col-md-6'>
         {{macro.displaySoures(entertainment)}}
+    </div>
+    <div class='col-md-6'>
+
+        {{macro.displaySouresUrl(entertainment) }}
+    </div> 
     </div>
     
     
@@ -47,7 +70,12 @@
         <div class="col-md-12 categories">
             <h2>Sports News</h2>
         </div>
+        <div class='col-md-6'>
         {{macro.displaySoures(sports)}}
+        </div>
+        <div class='col-md-6'>
+                {{macro.displaySouresUrl(sports) }}
+        </div>
     </div>
     
    
@@ -58,14 +86,24 @@
         <div class="col-md-12 categories">
             <h2>Health News</h2>
         </div>
+        <div class='col-md-6'>
         {{macro.displaySoures(health)}}
+        </div>
+        <div class='col-md-6'>
+                {{macro.displaySouresUrl(health) }}
+        </div>
     </div>
 
     <div class="row up" >
         <div class="col-md-12 categories">
             <h2 >Business News</h2>
         </div>
+        <div class='col-md-6'>
         {{macro.displaySoures(business)}}
+        </div>
+        <div class='col-md-6'>
+                {{macro.displaySouresUrl(business) }}
+        </div>
     </div>
 </div>
   {% endblock %}
